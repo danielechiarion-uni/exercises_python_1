@@ -7,7 +7,7 @@ number = number % 26 # having 26 or more is just making one more cycle, so take 
 new_string = ""
 for character in input_string:
     if character != " ":
-        new_string += chr(ord(character) + number)
+        new_string += chr((ord(character) + number - 65)%26 + 65) # to avoid the addition goes over than the number of character requested
     else:
         new_string += " "
 print(new_string)

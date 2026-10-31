@@ -9,7 +9,7 @@ password = password.upper()
 new_string = ""
 for i in range(len(input_string)):
     if input_string[i] != " ":
-        new_string += chr(ord(input_string[i]) + ord(password[i]) - 40)
+        new_string += chr((ord(input_string[i]) + ord(password[i]) - 130)%26 + 65) # calculate the sum then add the ascii character
     else:
         new_string += " "
 print(new_string)
